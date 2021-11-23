@@ -5,17 +5,21 @@ export default function App() {
   return (
     <div className="container">
       <div className="App">
-        <span className="border ">
-          <form className="search">
-            <input
-              className="text-box"
-              type="search"
-              placeholder="Type your word"
-            ></input>
-            <button type="submit"> 🔍</button>
-          </form>
-          <img src={logo} alt="Woman looking through a dictionary" />
-        </span>
+        <form className="search">
+          <input
+            className="text-box"
+            type="search"
+            placeholder="Type your word"
+          ></input>
+          <button type="submit"> 🔍</button>
+        </form>
+        <img src={logo} alt="Woman looking through a dictionary" />
+        <footer>
+          Haleh Motlagh -
+          <a href="https://github.com/Halehkm/dictionary-project-react">
+            GitHub
+          </a>
+        </footer>
       </div>
     </div>
   );
