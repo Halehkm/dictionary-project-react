@@ -3,8 +3,11 @@ import logo from "./undraw_book_lover_re_rwjy.svg";
 
 export default function Dictionary() {
   const [keyword, setKeyWord] = useState("");
+
   function search(event) {
     event.preventDefault();
+
+    alert(`Searching for ${keyword}`);
   }
 
   function handleKeywordChange(event) {
