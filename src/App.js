@@ -1,25 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import logo from "./undraw_book_lover_re_rwjy.svg";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <div className="App">
+        <span className="border ">
+          <form className="search">
+            <input
+              className="text-box"
+              type="search"
+              placeholder="Type your word"
+            ></input>
+            <button type="submit"> 🔍</button>
+          </form>
+          <img src={logo} alt="Woman looking through a dictionary" />
+        </span>
+      </div>
     </div>
   );
 }
-
-export default App;
