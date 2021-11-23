@@ -1,13 +1,22 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import logo from "./undraw_book_lover_re_rwjy.svg";
 
 export default function Dictionary() {
   const [keyword, setKeyWord] = useState("");
 
+  useEffect(() => {
+    let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${keyword}`;
+
+    axios.get(apiUrl).then(handleResponse);
+  }, [keyword]);
+
+  function handleResponse(response) {
+    console.log(response);
+  }
+
   function search(event) {
     event.preventDefault();
-
-    alert(`Searching for ${keyword}`);
   }
 
   function handleKeywordChange(event) {
