@@ -1,19 +1,11 @@
 import "./App.css";
-import logo from "./undraw_book_lover_re_rwjy.svg";
+import Dictionary from "./Dictionary";
 
 export default function App() {
   return (
     <div className="container">
       <div className="App">
-        <form className="search">
-          <input
-            className="text-box"
-            type="search"
-            placeholder="Type your word"
-          ></input>
-          <button type="submit"> 🔍</button>
-        </form>
-        <img src={logo} alt="Woman looking through a dictionary" />
+        <Dictionary />
         <footer>
           Haleh Motlagh -
           <a href="https://github.com/Halehkm/dictionary-project-react">
