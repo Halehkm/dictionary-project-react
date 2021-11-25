@@ -5,7 +5,9 @@ export default function App() {
   return (
     <div className="container">
       <div className="App">
-        <Dictionary />
+        <div className="Dictionary">
+          <Dictionary />
+        </div>
         <footer>
           Haleh Motlagh -
           <a href="https://github.com/Halehkm/dictionary-project-react">
