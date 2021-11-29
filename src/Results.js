@@ -21,10 +21,7 @@ export default function Results({ submitedKeyWord, setSubmitedKeyWord }) {
   return (
     <div className="Results">
       <h1 className="text-capitalize">{result.word}</h1>
-      <img
-        src=""
-        alt="picture of sunset"
-      />
+      
       <hr></hr>
       <p className="text-capitalize">{result.definition}</p>
       <ul>
