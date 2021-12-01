@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import Synonym from "./Synonym";
 
 export default function Results({ submitedKeyWord, setSubmitedKeyWord }) {
   const [result, setResult] = useState({});
@@ -21,11 +22,12 @@ export default function Results({ submitedKeyWord, setSubmitedKeyWord }) {
   return (
     <div className="Results">
       <h1 className="text-capitalize">{result.word}</h1>
-      
+
       <hr></hr>
       <p className="text-capitalize">{result.definition}</p>
+      <Synonym synonym={result.synonym} />
       <ul>
-        <li>{result.synonym}</li>
+        {/* <li>{result.synonym}</li> */}
         <li>{result.antonym}</li>
         <li>Images</li>
       </ul>
