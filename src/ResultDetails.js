@@ -10,14 +10,13 @@ export default function ResultDetails({ submitedKeyWord, setSubmitedKeyWord }) {
 
   useEffect(() => {
     setLoading(true);
-    console.log("hello");
     let apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${submitedKeyWord}`;
 
     axios.get(apiUrl).then(handleResponse);
   }, [submitedKeyWord]);
 
   function handleResponse(response) {
-    console.log(response.data[0].phonetics[0].text);
+    console.log(response.data[0].phonetics);
     setResult(response.data[0]);
     setLoading(false);
     /* setResult({
@@ -37,14 +36,14 @@ export default function ResultDetails({ submitedKeyWord, setSubmitedKeyWord }) {
   return (
     <div className="Results">
       <h1 className="text-capitalize">{result.word}</h1>
-      <Phonetic phonetics={result.phonetic} />
-      {result.meanings.map(function (meaning, index) {
-        return (
-          <Meaning key={index} meaning={meaning} />
-        );
+      {result.phonetics.map(function (phonetics, index) {
+        return <Phonetic key={index} phonetics={phonetics} />;
       })}
 
-      
+      {result.meanings.map(function (meaning, index) {
+        return <Meaning key={index} meaning={meaning} />;
+      })}
+
       <span>Looking for a different word?</span>
       <button onClick={() => setSubmitedKeyWord("")}> Reset </button>
     </div>
