@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-import Results from "./Results";
 import HomePage from "./HomePage";
+import ResultDetails from "./ResultDetails";
 
 export default function Dictionary() {
   const [submitedKeyWord, setSubmitedKeyWord] = useState("");
 
   if (submitedKeyWord) {
     return (
-      <Results
+      <ResultDetails
         submitedKeyWord={submitedKeyWord}
         setSubmitedKeyWord={setSubmitedKeyWord}
       />

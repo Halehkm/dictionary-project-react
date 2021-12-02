@@ -10,4 +10,10 @@ export default function Synonym(props) {
   } else {
     return null;
   }
+  /* return (
+    <div style={{ border: "1px solid red", padding: 10 }}>
+      <p>Synonym</p>
+      <pre>{JSON.stringify(props, null, 2)}</pre>
+    </div>
+  ); */
 }
