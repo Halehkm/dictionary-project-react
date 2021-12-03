@@ -16,20 +16,12 @@ export default function ResultDetails({ submitedKeyWord, setSubmitedKeyWord }) {
   }, [submitedKeyWord]);
 
   function handleResponse(response) {
-    console.log(response.data[0].phonetics);
     setResult(response.data[0]);
     setLoading(false);
-    /* setResult({
-      word: response.data[0].word,
-      definition: response.data[0].meanings[0].definitions[0].definition,
-      synonym: response.data[0].meanings[0].definitions[0].synonyms,
-      antonym: response.data[0].meanings[0].definitions[0].antonyms,
-      phonetic: response.data[0].phonetics[0].text,
-    }); */
   }
 
   if (loading) {
-    return <p>Looking for the defenition...</p>;
+    return <p>Searching for the defenition...</p>;
   }
 
   console.log(result);
@@ -39,6 +31,7 @@ export default function ResultDetails({ submitedKeyWord, setSubmitedKeyWord }) {
       {result.phonetics.map(function (phonetics, index) {
         return <Phonetic key={index} phonetics={phonetics} />;
       })}
+      <hr></hr>
 
       {result.meanings.map(function (meaning, index) {
         return <Meaning key={index} meaning={meaning} />;
