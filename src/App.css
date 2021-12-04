@@ -119,5 +119,13 @@ h1 {
 .Phonetic {
   font-family: "Amiri", serif;
   color: #2f2e41;
-  font-size: 18px;
+  font-size: 20px;
+}
+
+.AudioPlayer {
+  width: 461px;
+  border: solid 1px #003744;
+  border-radius: 25px;
+  height: 20px;
+  margin-left: 20px;
 }
