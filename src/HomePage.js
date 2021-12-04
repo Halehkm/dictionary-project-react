@@ -19,14 +19,17 @@ export default function HomePage({ setSubmitedKeyWord }) {
       {" "}
       <form className="search" onSubmit={search}>
         <input
-          className="text-box"
+          className="button"
           type="search"
           name="word"
           placeholder="Type your word"
           value={keyword}
           onChange={handleKeywordChange}
         ></input>
-        <button type="submit"> 🔍</button>
+        <button className="find-button" type="submit">
+          {" "}
+          🔍
+        </button>
       </form>
       <h5>Let's flip the page to: {keyword}</h5>
       <img src={logo} alt="Woman looking through a dictionary" />

@@ -31,14 +31,18 @@ export default function ResultDetails({ submitedKeyWord, setSubmitedKeyWord }) {
       {result.phonetics.map(function (phonetics, index) {
         return <Phonetic key={index} phonetics={phonetics} />;
       })}
-      <hr></hr>
+
+      
 
       {result.meanings.map(function (meaning, index) {
         return <Meaning key={index} meaning={meaning} />;
       })}
 
-      <span>Looking for a different word?</span>
-      <button onClick={() => setSubmitedKeyWord("")}> Reset </button>
+      <span>Change the page?</span>
+      <button className="button" onClick={() => setSubmitedKeyWord("")}>
+        {" "}
+        Reset{" "}
+      </button>
     </div>
   );
 }

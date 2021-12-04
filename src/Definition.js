@@ -1,11 +1,18 @@
 import Synonym from "./Synonym";
-import Antonym from "./Antonym";
-import Accordion from "react-bootstrap/Accordion";
-import "./Accordion.scss";
+/* import Accordion from "react-bootstrap/Accordion"; */
 
 export default function Definition(props) {
   return (
-    <Accordion>
+    <>
+      <div className="heading"> Definition:</div>
+      <p>{props.definition.definition}</p>
+      <div className="heading"> Example:</div>
+      <p>{props.definition.example}</p>
+      <div className="heading">
+        <Synonym synonym={props.definition.synonyms} />
+      </div>
+    </>
+    /* <Accordion defaultActiveKey="0" flush>
       <Accordion.Item eventKey="0">
         <Accordion.Header className="header">Definition</Accordion.Header>
         <Accordion.Body>
@@ -30,6 +37,6 @@ export default function Definition(props) {
           <Antonym antonym={props.definition.antonyms} />
         </Accordion.Body>
       </Accordion.Item>
-    </Accordion>
+    </Accordion> */
   );
 }
