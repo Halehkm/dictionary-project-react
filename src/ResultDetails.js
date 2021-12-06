@@ -24,15 +24,12 @@ export default function ResultDetails({ submitedKeyWord, setSubmitedKeyWord }) {
     return <p>Searching for the defenition...</p>;
   }
 
-  console.log(result);
   return (
     <div className="Results">
       <h1 className="text-capitalize">{result.word}</h1>
       {result.phonetics.map(function (phonetics, index) {
         return <Phonetic key={index} phonetics={phonetics} />;
       })}
-
-      
 
       {result.meanings.map(function (meaning, index) {
         return <Meaning key={index} meaning={meaning} />;

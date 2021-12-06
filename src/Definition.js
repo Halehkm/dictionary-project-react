@@ -1,4 +1,5 @@
 import Synonym from "./Synonym";
+
 /* import Accordion from "react-bootstrap/Accordion"; */
 
 export default function Definition(props) {
@@ -11,6 +12,7 @@ export default function Definition(props) {
       <div className="heading">
         <Synonym synonym={props.definition.synonyms} />
       </div>
+     
     </>
     /* <Accordion defaultActiveKey="0" flush>
       <Accordion.Item eventKey="0">
