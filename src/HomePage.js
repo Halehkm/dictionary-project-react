@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import logo from "./undraw_book_lover_re_rwjy.svg";
 
 export default function HomePage({ setSubmitedKeyWord }) {
-  const [keyword, setKeyWord] = useState("Wood");
+  const [keyword, setKeyWord] = useState("");
 
   function search(event) {
     event.preventDefault();
