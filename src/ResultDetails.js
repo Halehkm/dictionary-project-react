@@ -28,6 +28,7 @@ export default function ResultDetails({ submitedKeyWord, setSubmitedKeyWord }) {
     <div className="Results">
       <h1 className="text-capitalize">{result.word}</h1>
       {result.phonetics.map(function (phonetics, index) {
+        console.log(result.phonetics)
         return <Phonetic key={index} phonetics={phonetics} />;
       })}
 

@@ -1,5 +1,6 @@
 export default function Synonym(props) {
-  if (props.synonym) {
+
+  if (props.synonym.length) {
     return (
       <div className="synonym heading">
         {" "}
